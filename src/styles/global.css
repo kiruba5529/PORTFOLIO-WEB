@@ -1,0 +1,29 @@
+
+
+
+:root {
+  --bg-dark: #0d0b14;
+  --card-bg: #161224;
+  --purple: #a855f7;
+  --purple-light: #c084fc;
+  --text-light: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+section {
+  padding: 80px 0;
+}

@@ -1,0 +1,48 @@
+.cards h1 {
+  font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.cards {
+  text-align: center;
+  margin-left: 425px;
+}
+
+.cards button {
+  
+  font-size: 22px;
+    background-color: white;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 56px;
+
+}
+
+.mini-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cards {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+}
+
+
+
+
+.cards li {
+  background: #1e1e1e;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #ddd;
+  font-size: 14px;
+}
