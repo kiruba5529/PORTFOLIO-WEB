@@ -1,48 +1,118 @@
-.cards h1 {
-  font-size: 3.5rem;
-    text-align: center;
-    padding-bottom: 40px;
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+#projects {
+  background-color: var(--bg-dark);
 }
 
 .cards {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 32px 24px;
+  border-radius: 16px;
   text-align: center;
-  margin-left: 425px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* Title */
+.cards h1 {
+  margin-bottom: 20px;
+  color: var(--purple-light);
+}
+
+/* Button */
 .cards button {
-  
-  font-size: 22px;
-    background-color: white;
-    color: black;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: none;
-    border-radius: 56px;
-
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.cards button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(168, 85, 247, 0.4);
+}
+
+/* Mini project list */
+.mini-list {
+  margin-top: 24px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* List items */
+.mini-list li {
+  background: #1f1b2e;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.mini-list li:hover {
+  background: #2a2440;
+}
+
+
+
+@media (max-width: 600px) {
+  .cards {
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+
+  .cards h1 {
+    font-size: 1.6rem;
+  }
+
+  .cards button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .mini-list li {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+@media (min-width: 1025px) {
+  .cards {
+    max-width: 750px;
+  }
+
+  .cards h1 {
+    font-size: 2.4rem;
+  }
+}
+
+
+
 
 .mini-list {
-  list-style: none;
-  padding-left: 0;
+  animation: fadeIn 0.3s ease;
 }
 
-.cards {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 300px;
-}
-
-
-
-
-.cards li {
-  background: #1e1e1e;
-  margin: 8px 0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #ddd;
-  font-size: 14px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

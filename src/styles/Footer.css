@@ -1,5 +1,55 @@
+/* =========================
+   FOOTER
+========================= */
+
 .foot {
-  text-Align: center;
-  padding-bottom: 75px;
-  margin-left: 51px;
+  text-align: center;
+  padding: 20px 16px;
+  background-color: #0b0912;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Highlight name */
+.foot span {
+  color: var(--purple-light);
+}
+
+
+
+
+@media (max-width: 600px) {
+  .foot {
+    font-size: 0.85rem;
+    padding: 18px 12px;
+  }
+}
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .foot {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+@media (min-width: 1025px) {
+  .foot {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+.foot:hover {
+  color: var(--text-light);
 }

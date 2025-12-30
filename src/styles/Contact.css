@@ -1,24 +1,117 @@
-.contact h2 {
-  text-align: center;
-  color: var(--purple);
-  margin-top: 140px;
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+  background-color: var(--bg-dark);
 }
 
-.contact input,
-.contact textarea {
-  background: #0f0b1d;
-  border: 1px solid rgba(168, 85, 247, 0.3);
+/* Container */
+#contact .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* Title */
+#contact h2 {
+  color: var(--purple-light);
+  margin-bottom: 32px;
+}
+
+/* Contact rows */
+#contact p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* Icons */
+#contact svg {
+  color: var(--purple);
+  font-size: 1.1rem;
+}
+
+/* Last line spacing */
+#contact .btm {
+  margin-top: 28px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  #contact .container {
+    padding: 0 12px;
+  }
+
+  #contact p {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+  }
+
+  #contact svg {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #contact .container {
+    max-width: 700px;
+  }
+
+  #contact p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+@media (min-width: 1025px) {
+  #contact .container {
+    max-width: 800px;
+  }
+
+  #contact p {
+    font-size: 1.05rem;
+  }
+}
+
+
+
+
+#contact p:hover {
   color: var(--text-light);
 }
 
-.contact button {
-  background: linear-gradient(135deg, #9333ea, #6d28d9);
-  border: none;
-  padding: 12px;
-  color: white;
-  border-radius: 25px;
+
+
+
+
+#contact .container {
+  animation: fadeUp 0.6s ease;
 }
 
-.btm {
-  margin-bottom: 100px;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+

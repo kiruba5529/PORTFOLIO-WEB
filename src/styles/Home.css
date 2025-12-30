@@ -1,42 +1,100 @@
-/* Home section wrapper */
+/* =========================
+   HOME / HERO SECTION
+========================= */
+
 .Home {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px); /* adjust for navbar height */
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* move content from center to top */
-  padding-top: 45px; 
-  border-style: outset;
-  border-width: 1px;
-  border-left: none;
-  border-right: none;
-
+  align-items: center;
 }
 
-/* Inner content */
 .home {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  
+  padding: 0 16px;
 }
 
-.home h1 {
-  font-size: 3.5rem;
-  margin-top: 200px;
+/* Main heading */
+.top {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 12px;
 }
 
-.home h2 {
-  color: var(--text-muted);
-  font-size: 2.0rem;
-}
-
+/* Subheading */
 .bottom {
-  margin-top: 20px;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 500;
+  color: var(--purple-light);
+  margin-bottom: 20px;
 }
 
+/* Description */
 .btn1 {
-  padding-top: 20px;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  max-width: 700px;
+  margin: auto;
+  font-size: clamp(1rem, 3.8vw, 1.1rem);
+  color: var(--text-muted);
+  line-height: 1.8;
 }
 
 
 
+
+@media (max-width: 600px) {
+  .Home {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .home {
+    padding: 0 12px;
+  }
+
+  .top {
+    font-size: 2rem;
+  }
+
+  .bottom {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .home {
+    max-width: 700px;
+  }
+}
+
+
+
+
+@media (min-width: 1025px) {
+  .home {
+    max-width: 900px;
+  }
+}
+
+
+
+
+.home {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
